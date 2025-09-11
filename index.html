@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Frescazo Granizados - ¡Refresca tu día!</title>
+
+    <!-- Fuentes y iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">ICECOOL 🥤</a>
+            <ul class="nav__menu">
+                <li><a href="#productos">Sabores</a></li>
+                <li><a href="#promociones">Promos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <span class="nav__slogan">¡Refresca tu día con sabor!</span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero__content container">
+                <h1>El Sabor del Verano, <br>Todo el Año</h1>
+                <p>Granizados hechos con fruta 100% natural.</p>
+                <div class="hero__actions">
+                    <a href="#productos" class="button">Ver sabores</a>
+                    <a href="#" class="button" id="pedido-whatsapp">¡Haz tu pedido por WhatsApp!</a>
+                </div>
+                <p id="recomendacion-temperatura" class="recomendacion"></p>
+            </div>
+        </section>
+
+        <section id="productos" class="section container">
+            <h2 class="section__title">Nuestros Sabores</h2>
+            <div class="productos__container">
+                <!-- Card: Fresa -->
+                <div class="card" data-nombre="Granizado de Fresa" data-precio="8000">
+                    <img src="imagenes/fresa.png" alt="Granizado de Fresa" class="card__img">
+                    <h3 class="card__title">Fresa</h3>
+                    <p class="card__price">$8.000 COP</p>
+
+                    <!-- Toppings: checkboxes (puedes editar la lista) -->
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Leche condensada"> Leche condensada (+$1.000)</label>
+                            <label><input type="checkbox" value="Chispas de colores"> Chispas (+$500)</label>
+                            <label><input type="checkbox" value="Gomitas"> Gomitas (+$700)</label>
+                            <label><input type="checkbox" value="Chocolate"> Chocolate (+$1.000)</label>
+                            <label><input type="checkbox" value="Coco rallado"> Coco (+$700)</label>
+                        </div>
+                    </div>
+
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Card: Mango -->
+                <div class="card" data-nombre="Granizado de Mango" data-precio="8000">
+                    <img src="imagenes/mango.png" alt="Granizado de Mango" class="card__img">
+                    <h3 class="card__title">Mango</h3>
+                    <p class="card__price">$8.000 COP</p>
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Leche condensada"> Leche condensada (+$1.000)</label>
+                            <label><input type="checkbox" value="Pasta de tamarindo"> Tamarindo (+$500)</label>
+                            <label><input type="checkbox" value="Chispas de colores"> Chispas (+$500)</label>
+                            <label><input type="checkbox" value="Mentitas"> Mentitas (+$500)</label>
+                            <label><input type="checkbox" value="Miel"> Miel (+$700)</label>
+                        </div>
+                    </div>
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Card: Maracuyá -->
+                <div class="card" data-nombre="Granizado de Maracuyá" data-precio="8000">
+                    <img src="imagenes/piña.png" alt="Granizado de Maracuyá" class="card__img">
+                    <h3 class="card__title">Maracuyá</h3>
+                    <p class="card__price">$8.000 COP</p>
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Sirope de miel"> Miel (+$700)</label>
+                            <label><input type="checkbox" value="Semillas de maracuyá"> Semillas (+$500)</label>
+                            <label><input type="checkbox" value="Leche condensada"> Leche (+$1.000)</label>
+                            <label><input type="checkbox" value="Chispas de colores"> Chispas (+$500)</label>
+                        </div>
+                    </div>
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Card: Limón -->
+                <div class="card" data-nombre="Granizado de Limón" data-precio="8000">
+                    <img src="imagenes/limon.png" alt="Granizado de Limon" class="card__img">
+                    <h3 class="card__title">Limón</h3>
+                    <p class="card__price">$8.000 COP</p>
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Sal de fruta"> Sal (+$200)</label>
+                            <label><input type="checkbox" value="Miel"> Miel (+$700)</label>
+                            <label><input type="checkbox" value="Gomitas"> Gomitas (+$700)</label>
+                        </div>
+                    </div>
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Card: Mora -->
+                <div class="card" data-nombre="Granizado de Mora" data-precio="8000">
+                    <img src="imagenes/mora.png" alt="Granizado de mora" class="card__img">
+                    <h3 class="card__title">Mora</h3>
+                    <p class="card__price">$8.000 COP</p>
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Leche condensada"> Leche (+$1.000)</label>
+                            <label><input type="checkbox" value="Chispas de chocolate"> Choco (+$1.000)</label>
+                            <label><input type="checkbox" value="Galleta triturada"> Galleta (+$700)</label>
+                        </div>
+                    </div>
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+
+                <!-- Card: Piña Colada -->
+                <div class="card" data-nombre="Piña Colada" data-precio="8000">
+                    <img src="imagenes/piña colada.png" alt="Granizado de Piña Colada" class="card__img">
+                    <h3 class="card__title">Piña Colada</h3>
+                    <p class="card__price">$8.000 COP</p>
+                    <div class="toppings">
+                        <label>Toppings:</label>
+                        <div class="toppings__list">
+                            <label><input type="checkbox" value="Leche de coco"> Leche coco (+$1000)</label>
+                            <label><input type="checkbox" value="Coco rallado"> Coco (+$700)</label>
+                            <label><input type="checkbox" value="Sirope de caramelo"> Caramelo (+$800)</label>
+                        </div>
+                    </div>
+                    <div class="card__actions">
+                        <input type="number" class="cantidad-input" value="1" min="1" />
+                        <button class="button button--small añadir-carrito">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="promociones" class="section section--highlight">
+            <div class="container">
+                <h2 class="section__title">¡Promociones Refrescantes!</h2>
+                <div class="promociones__container">
+                    <div class="promo-card">
+                        <h3>🎉 Viernes de 2x1 🎉</h3>
+                        <p>Compra un granizado y lleva el segundo ¡GRATIS! todos los viernes.</p>
+                    </div>
+                    <div class="promo-card">
+                        <h3>👨‍👩‍👧‍👦 Combo Familiar 👨‍👩‍👧‍👦</h3>
+                        <p>Lleva 4 granizados de tus sabores favoritos por solo $28.000.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonios" class="section container">
+            <h2 class="section__title">Lo que dicen nuestros clientes</h2>
+            <div class="testimonios__container">
+                <div class="testimonio-card">
+                    <p>"¡Deliciosos y súper refrescantes! El de mango es mi favorito."</p>
+                    <div class="testimonio__rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <span>- Ana G.</span>
+                </div>
+                <div class="testimonio-card">
+                    <p>"Excelente servicio y los sabores son muy naturales. ¡Recomendado!"</p>
+                    <div class="testimonio__rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span>- Carlos P.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section container">
+            <h2 class="section__title">¡Encuéntranos!</h2>
+            <div class="contacto__container">
+                <div class="contacto__info">
+                    <a href="#" class="contacto__link" id="contacto-whatsapp"><i class="fab fa-whatsapp"></i> Haz tu pedido</a>
+                    <a href="https://instagram.com" target="_blank" class="contacto__link"><i class="fab fa-instagram"></i> @frescazogranizados</a>
+                </div>
+                <div class="contacto__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.974994887739!2d-74.0837882857367!3d4.60384204369912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a473204481%3A0x9483c36a3628085f!2sPlaza%20de%20Bol%C3%ADvar!5e0!3m2!1ses!2sco!4v1662939744883!5m2!1ses!2sco" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Carrito flotante -->
+    <div class="carrito-flotante" id="carrito">
+        <h3>🛒 Mi Pedido</h3>
+        <ul id="carrito-lista">
+            <li>Tu carrito está vacío</li>
+        </ul>
+
+        <div class="carrito__info">
+            <p class="carrito__total">Total: <span id="carrito-total">$0</span></p>
+            <div class="carrito__botones">
+                <!-- Botón flotante carrito -->
+<button id="toggle-carrito" class="carrito-toggle">🛒</button>
+
+                <button class="button" id="btn-pagar">Pagar ahora</button>
+                <button class="button" id="btn-enviar-whatsapp">Enviar por WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de pago (simulado) -->
+    <div id="modal-pago" class="modal">
+        <div class="modal__content">
+            <button class="modal__close" id="cerrar-modal">&times;</button>
+            <h3>Pagar pedido</h3>
+            <p>Selecciona método de pago (simulado).</p>
+
+            <div class="metodos-pago">
+                <label><input type="radio" name="metodo-pago" value="Tarjeta" checked> Tarjeta (simulado)</label>
+                <label><input type="radio" name="metodo-pago" value="Efectivo"> Efectivo al entregar</label>
+                <label><input type="radio" name="metodo-pago" value="Transferencia"> Transferencia</label>
+            </div>
+
+            <form id="form-pago" class="form-pago">
+                <!-- Datos de tarjeta simulados -->
+                <div class="form-row">
+                    <label>Número de tarjeta</label>
+                    <input type="text" id="card-number" placeholder="4242 4242 4242 4242" autocomplete="off" />
+                </div>
+                <div class="form-row">
+                    <label>Nombre en la tarjeta</label>
+                    <input type="text" id="card-name" placeholder="Nombre completo" />
+                </div>
+                <div class="form-row grupo">
+                    <div>
+                        <label>MM/AA</label>
+                        <input type="text" id="card-exp" placeholder="08/26" />
+                    </div>
+                    <div>
+                        <label>CVC</label>
+                        <input type="text" id="card-cvc" placeholder="123" />
+                    </div>
+                </div>
+
+                <div class="form-acciones">
+                    <button type="submit" class="button">Pagar ahora</button>
+                </div>
+            </form>
+
+            <p class="nota-pago">Nota: este formulario es una simulación. Para pagos reales integra gateways como MercadoPago, PayU o Stripe.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Frescazo Granizados. Todos los derechos reservados.</p>
+            <div class="footer__social">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

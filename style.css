@@ -208,12 +208,17 @@ body {
 
   .hero__content h1 { font-size: 2.3rem; }
   .productos__container { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+
+  /* 🔧 Corregido: el carrito ya no se muestra abierto por defecto en móviles */
   .carrito-flotante {
-    right: 0;
+    right: -100%;
     width: 100%;
     height: 100%;
     border-left: none;
     border-top: 3px solid var(--color-principal);
+  }
+  .carrito-flotante.activo {
+    right: 0;
   }
 }
 
@@ -226,5 +231,6 @@ body {
   .card { width: 100%; padding: 16px; }
   .footer { font-size: 0.9rem; }
 }
+
 
 
